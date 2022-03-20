@@ -1,39 +1,39 @@
 import "./../css/main.css";
 import QuestionBox from "./QuestionBox";
-
 const questions = [
     {
-        number: 1,
+        question: `O que é JSX?`,
     },
     {
-        number: 2,
+        question: `O React é __`,
     },
     {
-        number: 3,
+        question: `Componentes devem iniciar com __ `,
     },
     {
-        number: 4,
+        question: `Podemos colocar __ dentro do JSX`,
     },
     {
-        number: 5,
+        question: `O ReactDOM nos ajuda __ `,
     },
     {
-        number: 6,
+        question: ` Usamos o npm para __`
     },
     {
-        number: 7,
+        question: `Usamos props para __`,
     },
     {
-        number: 8,
+        question: `Usamos estado (state) para __`
     }];
 
 export default function Questions(){
 
     return (
         <>
-            {questions.map(({number}) => (
+            {questions.sort(function() { return 0.5 - Math.random() }).map(({question},index) => (
                     <QuestionBox 
-                        number={number}
+                        index={index+1}
+                        question={question}
                     />  
             ))}
         </>    

@@ -1,9 +1,11 @@
 import "./../css/main.css" 
 
-export default function QuestionBox({number}){
+export default function QuestionBox({question,index}){
+
     return (
-        <div className="question-box">
-            <h2>Pergunta {number}</h2>
+        <div className="question-box" >
+            <h2>Pergunta {index}</h2>
+            <p className="hidden">{question}</p>
             <ion-icon name="play-outline"></ion-icon>
         </div>
     )
