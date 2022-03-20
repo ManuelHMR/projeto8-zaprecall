@@ -1,32 +1,10 @@
 import "./../css/main.css" 
+import Questions from "./Questions"
 
 export default function Main(){
     return (
         <main>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
-            <div className="question-box">
-                <h2>Pergunta 1</h2>
-            </div>
+            <Questions/>
         </main>
     )
 }
