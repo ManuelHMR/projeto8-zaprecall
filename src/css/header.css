@@ -6,17 +6,16 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-}
-img{
+    z-index: 2; 
+    padding: 22px 0px 35px 0px;
+}    
+header img{
     width: 52px;
     height: 60px;
-    padding: 19px 0px 32px 0px;
 }
 header h1{
     font-family: 'Righteous', cursive;
     font-size: 36px;
     color: #ffffff;
     font-weight: 400;
-    padding: 22px 0px 35px 0px;
 }
