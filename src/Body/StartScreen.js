@@ -1,4 +1,4 @@
-import logo from "./../assets/logo.png"
+import logo from "./../assets/logo.svg"
 import "./../css/start-screen.css";
 import { useState } from "react";
 
@@ -13,5 +13,5 @@ export default function StartScreen(){
                 Iniciar Recall!
             </button>
         </div>
-    ) : (``);
+    ) : (``)
 }

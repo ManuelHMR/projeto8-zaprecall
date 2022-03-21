@@ -99,3 +99,6 @@ ion-icon{
     font-size: 18px;
     text-decoration: line-through;
 }
+.unflipped img{
+    margin-right: 15px;
+}

@@ -1,5 +1,8 @@
 import "./../css/main.css" 
 import reverse from "./../assets/setinha.png"
+import greenImg from "./../assets/green-check.svg"
+import orangeImg from "./../assets/orange-question-mark.svg"
+import redImg from "./../assets/red-lose-circle.svg"
 import { useState } from "react"
 
 export default function Card({index, question, answer}){
@@ -34,10 +37,20 @@ export default function Card({index, question, answer}){
         )
     }
     if(state === `unflipped`){
+        let imgResult
+        if(status === 'red'){
+            imgResult = redImg
+        }
+        if(status === 'orange'){
+            imgResult = orangeImg
+        }
+        if(status === 'green'){
+            imgResult = greenImg
+        }
         return (
             <div className="unflipped">
                 <h2 className={status}>Pergunta {index}</h2>
-                <ion-icon name="play-outline"></ion-icon>
+                <img src={imgResult} alt="result"/>
             </div>
         )}
 }
