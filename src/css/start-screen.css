@@ -32,3 +32,18 @@
     font-weight: 400;
     font-size: 18px;
 }
+select{
+    margin-top: 25px;
+    width: 246px;
+    height: 43px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    color: #ADADAD;
+}
+option{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}

@@ -1,17 +1,21 @@
 import "./../css/main.css" 
 import Questions from "./Questions"
+import Footer from "./Footer";
 
 export default function Main(){
     return (
         <main>
             <Questions
                 deck = {deck}
+            />  
+            <Footer
+                deck ={deck}
             />
         </main>
     )
 }
-
-const deck = [
+const results = [];
+const deckReact = [
     {
         question: `O que é JSX?`,
         answer: `Uma extensão de linguagem do JavaScript`,
@@ -53,4 +57,7 @@ const deck = [
         question: `Usamos estado (state) para __`,
         answer: `Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente`,
         status: ``,
-    }];
+    },
+  
+];
+const deck = [...deckReact].sort(function() { return 0.5 - Math.random() })
