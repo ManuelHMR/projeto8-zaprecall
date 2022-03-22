@@ -1,6 +1,6 @@
 footer{
     width: 100%;
-    height: 70px;
+    height: 90px;
     position: fixed;
     bottom: 0px;
     background-color: #FFFFFF;
@@ -9,8 +9,11 @@ footer{
     justify-content: center;
     font-size: 18px;
     font-weight: 400;
-
+    flex-direction: column;
 }
 footer h1{
     color: black;
+}
+.icons{
+    display: flex;
 }

@@ -4,9 +4,8 @@ import greenImg from "./../assets/green-check.svg"
 import orangeImg from "./../assets/orange-question-mark.svg"
 import redImg from "./../assets/red-lose-circle.svg"
 import { useState } from "react"
-let results = [];
 
-export default function Card({index, question, answer}){
+export default function Card({index, question, answer, setResult}){
     const [state, setState] = useState(`displayed`);
     const[status, setStatus] = useState('');
     if (state === `displayed`){
@@ -29,9 +28,9 @@ export default function Card({index, question, answer}){
             <div className="flipped answered">
                 <h2>{answer}</h2>
                 <div className="options">
-                    <p className="red-background" onClick={()=> {setState(`unflipped`); setStatus('red')}}>Não lembrei</p>
-                    <p className="orange-background" onClick={()=>{setState(`unflipped`); setStatus('orange')}}>Quase não lembrei</p>
-                    <p className="green-background" onClick={()=>{setState(`unflipped`); setStatus('green')}}>Zap!</p>
+                    <p className="red-background" onClick={()=> {setState(`unflipped`); setStatus('red'); setResult((oldArr)=> [...oldArr,redImg])}}>Não lembrei</p>
+                    <p className="orange-background" onClick={()=>{setState(`unflipped`); setStatus('orange'); setResult((oldArr)=> [...oldArr,orangeImg])}}>Quase não lembrei</p>
+                    <p className="green-background" onClick={()=>{setState(`unflipped`); setStatus('green'); setResult((oldArr)=> [...oldArr,greenImg])}}>Zap!</p>
                 </div>
             </div>
         )
@@ -40,15 +39,12 @@ export default function Card({index, question, answer}){
         let imgResult
         if(status === 'red'){
             imgResult = redImg
-            results.push('red')
         }
         if(status === 'orange'){
             imgResult = orangeImg
-            results.push('orange')
         }
         if(status === 'green'){
             imgResult = greenImg
-            results.push('green')
         }
         return (
             <div className="unflipped">
